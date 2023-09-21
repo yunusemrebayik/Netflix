@@ -1,41 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Netflix Clone</title>
-    <link
-    rel="stylesheet"
-    href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-    crossorigin="anonymous"
-    />
-</head>
-<body>
-    <div class="logcase-top">
-    <img src="./img/main/logo.png" alt="Netflix">
-    <div class="logcase-content">
-    <div>
-        <br>
-    </div>
-        <h1 class="login-content-h1">
-        Sign In
-    </h1>
-    <div class="input_idlog">
-        <input type="email" class="input-logmail" placeholder="Email or phone number">
-    </div>
-    <div class="input_idlog">
-        <input type="password" class="input-logmail" placeholder="Password">
-        <a href="#" class="btn btn-getSignIn2">Sign In</a>
-    </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    </div>
-</body>
-</html>
+    <style>
+        body {
+            background: url("./img/main/background.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+        }
 
+        body:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100.5%;
+            z-index: -1;
+            background: rgb(0, 0, 0, 0.6);
+            box-shadow: inset 20px 20px 150px #000000, inset -20px -10px -150px #000000;
+        }
+    
+    </style>
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+    
+        <div class="login_logo">
+            <img src="./img/main/logo.png" alt="Netflix">
+        </div>
+
+        <div class="login-container">
+            <h1>Sign In</h1>
+            <form action="/login" method="post">
+                <input type="email" name="email" class="email-input" placeholder="Email or phone number">
+                <input type="password" name="password" class="password-input" placeholder="Password">
+                <input type="submit" class="login-button" value="Sign In">
+                
+                <div class="remember-me">
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me">Remember me</label>
+                </div>
+                
+                <p class="help">Need help?</p>
+                <br>
+                <p>New to Netflix?</p>
+                <P class="sign">Sign up now.</P>
+                <p class="captcha">This page is protected by Google reCAPTCHA to ensure you're not a bot. Learn more.
+                </p>
+            </form>
+        </div>
+    
+</body>
+
+</html>
